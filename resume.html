@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Kawsar Ahammed</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Resume of Kawsar Ahammed — Website Developer focused on clean, responsive, human-friendly websites.">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/a2.jpg" alt="Kawsar logo" class="brand-logo" />
+      <span class="brand-text">Kawsar Ahammed</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+      <span class="menu-bars" aria-hidden="true"></span>
+    </button>
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html" class="btn btn-accent">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <!-- As requested: no page title / no top download button -->
+      <h2>Summary</h2>
+      <p>
+        Website Developer who turns ideas into clean, responsive sites. I focus on fast load times,
+        accessible structure, and a friendly user experience. I keep things simple so clients can relax.
+      </p>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Skills — Technical</h3>
+          <ul class="checks">
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive Design</li>
+            <li>Basic SEO</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Skills — Soft</h3>
+          <ul class="checks">
+            <li>Communication</li>
+            <li>Problem Solving</li>
+            <li>Attention to Detail</li>
+            <li>Time Management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>BSc in Computer Software Engineering</strong><br>
+          Daffodil International University (2021–2025)</p>
+        </div>
+        <div class="card">
+          <h3>Experience</h3>
+          <p>No professional experience yet; actively learning and building projects.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Project Highlight</h3>
+        <p><strong>Personal Bio Page</strong> — HTML, CSS &amp; JS<br>
+          Live: <a class="link" href="https://kawsarahammedantor.netlify.app" target="_blank" rel="noopener">Netlify</a> •
+          GitHub: <a class="link" href="https://github.com/KawsarAhammedAntor1/personal-bio-page" target="_blank" rel="noopener">Repository</a>
+        </p>
+      </div>
+      <!-- Removed the PDF download line as requested -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kawsar Ahammed</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

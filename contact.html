@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Kawsar Ahammed</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Contact Kawsar Ahammed — Send a message for clean, responsive websites built with care.">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/a2.jpg" alt="Kawsar logo" class="brand-logo" />
+      <span class="brand-text">Kawsar Ahammed</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+      <span class="menu-bars" aria-hidden="true"></span>
+    </button>
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html" class="btn btn-accent">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Contact</h1>
+      <p>Tell me what you need. I’ll make it easy for you—no worries.</p>
+
+      <!-- Contact Form (top, unchanged) -->
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message <span class="helper">(max 1000 characters)</span></label>
+          <textarea id="message" name="message" rows="6" maxlength="1000" required></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row file-row">
+          <label for="resume">(Optional)</label>
+          <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" />
+        </div>
+
+        <button class="btn btn-accent" type="submit">Send Message</button>
+      </form>
+
+      <!-- Map full width -->
+      <div class="card" style="margin-top:20px">
+        <h2>Location</h2>
+        <iframe
+          class="map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Dhaka,%20Bangladesh&output=embed">
+        </iframe>
+      </div>
+
+      <!-- Email below the map (compact line, no extra empty space) -->
+      <div class="card email-compact">
+        <h2>Email</h2>
+        <p class="email-line">
+          <img src="images/a4.jpg" alt="Gmail" class="email-icon">
+          <a class="link" href="mailto:kawsarahammed200a@gmail.com">kawsarahammed200a@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Social links (unchanged) -->
+      <div class="card">
+        <h2>Social Links</h2>
+        <div class="social-links">
+          <a href="https://github.com/KawsarAhammedAntor1" target="_blank" rel="noopener">
+            <img src="images/a5.jpg" alt="GitHub"> <span>GitHub</span>
+          </a>
+          <a href="https://facebook.com/antor.is.always.king" target="_blank" rel="noopener">
+            <img src="images/a6.jpg" alt="Facebook"> <span>Facebook</span>
+          </a>
+          <a href="https://www.google.com" target="_blank" rel="noopener">
+            <img src="images/a7.jpg" alt="Google"> <span>Google</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kawsar Ahammed</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

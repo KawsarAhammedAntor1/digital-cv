@@ -1,0 +1,127 @@
+/* ---------- Base Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background:#0d1117;
+  color:#f0f6fc;
+}
+
+/* ---------- Header */
+.site-header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem; background:#161b22;
+}
+.brand{display:flex; align-items:center; gap:.5rem; text-decoration:none; color:#fff}
+.brand-logo{width:32px; height:32px; border-radius:50%}
+.menu-toggle{background:none; border:none; cursor:pointer; display:none}
+.menu-bars,.menu-bars::before,.menu-bars::after{
+  display:block; width:25px; height:3px; background:#f0f6fc; border-radius:2px; position:relative
+}
+.menu-bars::before,.menu-bars::after{content:""; position:absolute; left:0}
+.menu-bars::before{top:-8px} .menu-bars::after{top:8px}
+
+.site-nav{display:flex; gap:1rem}
+.site-nav a{color:#f0f6fc; text-decoration:none}
+.site-nav a.active{font-weight:700; border-bottom:2px solid #58a6ff}
+
+.btn{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:.5rem 1rem; border-radius:8px;
+  background:#30363d; color:#f0f6fc; text-decoration:none; font-size:.95rem;
+}
+.btn img{width:18px; height:18px; border-radius:4px}
+.btn-accent{background:#00c2c7; color:#000; font-weight:600}
+.btn-row{display:flex; gap:1rem; margin-top:1rem}
+
+/* ---------- Sections */
+.section{padding:2rem 1rem; max-width:800px; margin:0 auto}
+h1,h2{margin-bottom:1rem}
+.card{
+  background:#161b22; padding:1.25rem 1.25rem; border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.4); margin-bottom:1.1rem;
+}
+
+/* ---------- Grid (if needed elsewhere) */
+.grid{display:grid; gap:18px}
+.grid.two{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+
+/* ---------- Images */
+.about-square,.hero-square{
+  display:block; width:100%; height:auto; border-radius:8px; margin-bottom:1.5rem;
+}
+
+/* ---------- Contact form (unchanged look) */
+.form{max-width:720px}
+.form-row{display:flex; flex-direction:column; gap:6px; margin:12px 0}
+label{font-weight:600; color:#f0f6fc}
+input,textarea{
+  width:100%;
+  background:#0f1520; color:#f0f6fc; border:1px solid #2f3a4a; border-radius:10px; padding:12px; outline:none;
+}
+textarea#message{min-height:220px}
+input:focus,textarea:focus{border-color:#58a6ff; box-shadow:0 0 0 3px rgba(88,166,255,.15)}
+.helper{color:#9fb0c8; font-size:.95rem}
+.error{color:#ff9090; min-height:1.1em; font-size:.95rem}
+.file-row{display:flex; align-items:center; gap:10px}
+
+/* Email inline icon (compact, no big empty space) */
+.email-compact{ padding: .8rem 1rem; } /* ছোট কার্ড প্যাডিং */
+.email-line{display:inline-flex; align-items:center; gap:8px}
+.email-icon{width:20px; height:20px; border-radius:4px; object-fit:contain}
+
+/* ---------- Map full width */
+.map{
+  width:100%; height:280px;
+  border:1px solid #2f3a4a; border-radius:10px;
+}
+
+/* ---------- Social Links (small icons + inline) */
+.social-links{
+  display:flex !important; flex-direction:row !important;
+  justify-content:flex-start; align-items:center;
+  gap:16px; flex-wrap:wrap; margin-top:.5rem;
+}
+.social-links a{
+  display:flex !important; align-items:center;
+  gap:6px; text-decoration:none; color:#58a6ff; font-size:1rem;
+}
+.social-links img{
+  width:20px !important; height:20px !important;
+  object-fit:contain; border-radius:4px;
+}
+
+/* ---------- Success popup (already used by JS) */
+.success-box{
+  position: fixed;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff; color: #000;
+  border-radius: 8px;
+  padding: 18px 22px;
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  z-index: 2000;
+}
+.success-box .check{
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #28a745;
+  color: #fff; font-size: 14px; line-height: 22px; text-align: center;
+}
+
+/* ---------- Footer */
+.site-footer{text-align:center; padding:1rem; background:#161b22; color:#8b949e; font-size:.9rem}
+
+/* ---------- Responsive */
+@media (max-width:768px){
+  .menu-toggle{display:block}
+  .site-nav{
+    display:none; flex-direction:column; gap:1rem; background:#161b22; padding:1rem;
+    position:absolute; top:60px; right:10px; border-radius:8px;
+  }
+  .site-nav.open{display:flex}
+  .btn-row{flex-direction:column}
+}
